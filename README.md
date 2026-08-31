@@ -4,7 +4,7 @@ This repository contains the source code for my personal website.
 
 The site is built as a clean, minimal portfolio to present my background, skills, and future projects. It is hosted using GitHub Pages.
 
-🌐 Live site: https://hhy1337.github.io/
+🌐 Live site: ts1ngyun.github.io
 
 ---
 
