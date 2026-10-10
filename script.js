@@ -15,6 +15,14 @@
     toolkit: "toolkit.json",
     contact: "hello",
   };
+  const lifeBuilding = $("#life-building");
+  const buildingNames = [
+    ["Beijing 21CIS", "Beijing 21CIS"],
+    ["University of Birmingham", "University of Birmingham"],
+    ["Photography enthusiast", "摄影爱好者"],
+    ["Drawing enthusiast", "绘画爱好者"],
+  ];
+  let buildingStep = 0;
   let activeTab = "about";
   let language = "en";
   let toastTimer;
@@ -44,6 +52,13 @@
     dockProjects: ["Open Projects", "打开项目"],
     dockToolkit: ["Open My toolkit", "打开技能工具箱"],
     dockContact: ["Open Contact", "打开联系我"],
+    rotateLeft: ["Rotate building left", "向左旋转建筑"],
+    rotateRight: ["Rotate building right", "向右旋转建筑"],
+    building: ["Rotate the building", "旋转建筑"],
+    cursorColor: ["Cursor preview color", "光标预览颜色"],
+    ice: ["Ice blue", "冰蓝色"],
+    rose: ["Rose pink", "浅粉色"],
+    sage: ["Sage green", "鼠尾草绿"],
   };
   const t = (key) => labels[key][language === "zh" ? 1 : 0];
 
@@ -106,12 +121,20 @@
       '[data-dock="projects"]': "dockProjects",
       '[data-dock="toolkit"]': "dockToolkit",
       '[data-dock="contact"]': "dockContact",
+      '[data-rotate="-1"]': "rotateLeft",
+      '[data-rotate="1"]': "rotateRight",
+      ".building-controls": "building",
+      ".cursor-swatches": "cursorColor",
+      '[data-cursor-swatch="ice"]': "ice",
+      '[data-cursor-swatch="rose"]': "rose",
+      '[data-cursor-swatch="sage"]': "sage",
     };
     Object.entries(targets).forEach(([selector, key]) =>
       setLabel($(selector), key),
     );
     updateControlLabels();
     updateClock();
+    renderBuilding();
     if (persist) {
       try {
         localStorage.setItem("haoyu-language", language);
@@ -265,7 +288,7 @@
   $$(".copy-email").forEach((button) =>
     button.addEventListener("click", async () => {
       try {
-        await navigator.clipboard.writeText("hehehong2006@163.com");
+        await navigator.clipboard.writeText("hehehong2006@gmail.com");
         showToast(t("copied"));
       } catch {
         showToast(t("copyFailed"));
@@ -276,6 +299,57 @@
         selection.removeAllRanges();
         selection.addRange(range);
       }
+    }),
+  );
+
+  function renderBuilding() {
+    const face = ((buildingStep % 4) + 4) % 4;
+    lifeBuilding.style.setProperty(
+      "--building-turn",
+      -25 - buildingStep * 90 + "deg",
+    );
+    lifeBuilding.dataset.activeFace = String(face);
+    $$("[data-face]").forEach((button) => {
+      button.setAttribute(
+        "aria-pressed",
+        String(Number(button.dataset.face) === face),
+      );
+    });
+    $("#building-status").textContent =
+      "0" +
+      (face + 1) +
+      " / 04 — " +
+      buildingNames[face][language === "zh" ? 1 : 0];
+  }
+
+  $$("[data-rotate]").forEach((button) =>
+    button.addEventListener("click", () => {
+      buildingStep += Number(button.dataset.rotate);
+      renderBuilding();
+    }),
+  );
+  $$("[data-face]").forEach((button) =>
+    button.addEventListener("click", () => {
+      const current = ((buildingStep % 4) + 4) % 4;
+      const target = Number(button.dataset.face);
+      buildingStep += ((target - current + 6) % 4) - 2;
+      renderBuilding();
+    }),
+  );
+  $(".building-controls").addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      buildingStep += event.key === "ArrowLeft" ? -1 : 1;
+      renderBuilding();
+    }
+  });
+  $$("[data-cursor-swatch]").forEach((button) =>
+    button.addEventListener("click", () => {
+      const color = button.dataset.cursorSwatch;
+      $(".atelier-canvas").dataset.cursorColor = color;
+      $$("[data-cursor-swatch]").forEach((swatch) =>
+        swatch.setAttribute("aria-pressed", String(swatch === button)),
+      );
     }),
   );
 

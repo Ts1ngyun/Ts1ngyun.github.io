@@ -12,6 +12,8 @@ Live: [ts1ngyun.github.io](https://ts1ngyun.github.io/)
 - Responsive layouts, reduced-motion support, and accessible focus states.
 - Email links and a copy-address button with a manual-copy fallback.
 - Original avatar and city wallpaper retained in the new design.
+- A button-controlled 3D building with four sides: Beijing 21CIS, University of Birmingham, photography, and drawing. The original code, automation, and web illustrations live in its windows.
+- A dedicated [Cursor Atelier](https://github.com/Ts1ngyun/cursor-atelier) project showcase with an interactive cursor color preview.
 
 ## Edit and preview
 
@@ -26,8 +28,8 @@ Open `index.html` directly for a basic preview, or serve the directory through a
 
 BSc Computer Science, University of Birmingham (2025–2028).
 
-- Email: [hehehong2006@163.com](mailto:hehehong2006@163.com)
+- Email: [hehehong2006@gmail.com](mailto:hehehong2006@gmail.com)
 - GitHub: [Ts1ngyun](https://github.com/Ts1ngyun)
 - LinkedIn: [Haoyu Hong](https://www.linkedin.com/in/haoyuhong2006/)
 
-The email matches the original live website. Only verified work is presented; additional projects can be added as they are ready.
+The contact address is `hehehong2006@gmail.com`.
