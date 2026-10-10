@@ -1,35 +1,33 @@
-# Personal Website
+# Haoyu Hong — Personal Website
 
-This repository contains the source code for my personal website.
+A personal portfolio with a dark blue visual theme and an interactive macOS-inspired workspace. Built with HTML, CSS, and vanilla JavaScript, without a build step or runtime dependencies.
 
-The site is built as a clean, minimal portfolio to present my background, skills, and future projects. It is hosted using GitHub Pages.
+Live: [ts1ngyun.github.io](https://ts1ngyun.github.io/)
 
-🌐 Live site: [ts1ngyun.github.io](https://ts1ngyun.github.io/)
+## Features
 
----
+- Interactive About, Projects, Toolkit, and Contact tabs, including keyboard navigation.
+- Working window controls and Dock shortcuts; Escape exits the expanded workspace.
+- English and Chinese with a saved language preference.
+- Responsive layouts, reduced-motion support, and accessible focus states.
+- Email links and a copy-address button with a manual-copy fallback.
+- Original avatar and city wallpaper retained in the new design.
+
+## Edit and preview
+
+- `index.html`: content, links, and translations (`data-en` / `data-zh`).
+- `styles.css`: layout, theme, illustrations, and responsive styles.
+- `script.js`: workspace interaction, language preferences, and clipboard handling.
+- `assets/`: avatar, wallpaper, and favicon.
+
+Open `index.html` directly for a basic preview, or serve the directory through any static HTTP server for clipboard support. No package installation or compilation is required. GitHub Pages publishes the site from the repository root on `main`.
 
 ## About
 
-I am a first-year BSc Computer Science student at the University of Birmingham (2025–2028).
+BSc Computer Science, University of Birmingham (2025–2028).
 
----
+- Email: [hehehong2006@163.com](mailto:hehehong2006@163.com)
+- GitHub: [Ts1ngyun](https://github.com/Ts1ngyun)
+- LinkedIn: [Haoyu Hong](https://www.linkedin.com/in/haoyuhong2006/)
 
-## Tech Stack
-
-- HTML5
-- CSS3
-- Git & GitHub Pages
-
----
-
-## Status
-
-The website is actively maintained and will be updated as new projects are completed.
-
----
-
-## Contact
-
-- Email: hehehehong2006@163.com  
-- GitHub: https://github.com/hhy1337
-- LinkedIn: https://www.linkedin.com/in/haoyuhong2006/
+The email matches the original live website. Only verified work is presented; additional projects can be added as they are ready.
