@@ -6,13 +6,10 @@
     <meta name="theme-color" content="#0b0d11" />
     <meta
       name="description"
-      content="Haoyu Hong — Computer Science student at the University of Birmingham. Exploring software, automation, and thoughtful web experiences."
+      content="Haoyu Hong — Computer Science student at the University of Birmingham."
     />
-    <meta property="og:title" content="Haoyu Hong — Curiosity into code" />
-    <meta
-      property="og:description"
-      content="A personal workspace for software, ideas, and everything I’m learning along the way."
-    />
+    <meta property="og:title" content="Haoyu Hong — Portfolio" />
+    <meta property="og:description" content="Haoyu Hong’s personal website." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ts1ngyun.github.io/" />
     <meta
@@ -24,7 +21,7 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
-    <title>Haoyu Hong — Curiosity into code</title>
+    <title>Haoyu Hong — Portfolio</title>
   </head>
   <body>
     <a
@@ -121,45 +118,14 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-glow" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="status-dot"></span
-            ><span
-              data-en="A CURIOUS MIND. A WORK IN PROGRESS."
-              data-zh="保持好奇，持续创造。"
-              >A CURIOUS MIND. A WORK IN PROGRESS.</span
-            >
-          </p>
-          <h1 id="hero-title">
-            <span data-en="Curiosity into code." data-zh="以好奇心，写下代码。"
-              >Curiosity into code.</span
-            ><span
-              class="soft-heading"
-              data-en="Ideas into reality."
-              data-zh="让想法，成为现实。"
-              >Ideas into reality.</span
-            >
-          </h1>
-          <p class="hero-description">
-            <span
-              data-en="I’m Haoyu, a Computer Science student at the University of Birmingham."
-              data-zh="我是 Haoyu，正在伯明翰大学学习计算机科学。"
-              >I’m Haoyu, a Computer Science student at the University of
-              Birmingham.</span
-            ><br /><span
-              data-en="Building useful software. Learning something new along the way."
-              data-zh="创造实用的软件，也在过程中探索新的可能。"
-              >Building useful software. Learning something new along the
-              way.</span
-            >
-          </p>
+          <h1 id="hero-title" lang="en">Welcome.</h1>
           <div class="hero-actions">
             <a
               class="button button-primary"
               href="#workspace"
               data-open-workspace="about"
               ><svg class="icon"><use href="#i-terminal" /></svg
-              ><span data-en="Explore my workspace" data-zh="探索我的工作空间"
-                >Explore my workspace</span
+              ><span data-en="Workspace" data-zh="工作空间">Workspace</span
               ><svg class="icon arrow-down"><use href="#i-down" /></svg
             ></a>
             <a
@@ -228,12 +194,6 @@
                     ><svg class="icon"><use href="#i-folder" /></svg>haoyu /
                     <span id="window-filename">about.md</span></span
                   >
-                  <span class="window-top-meta"
-                    >⌘
-                    <span data-en="Make yourself at home" data-zh="欢迎随意探索"
-                      >Make yourself at home</span
-                    ></span
-                  >
                 </div>
                 <div class="window-body" id="window-body">
                   <aside class="window-sidebar">
@@ -271,8 +231,8 @@
                         data-tab="about"
                       >
                         <svg class="icon"><use href="#i-user" /></svg
-                        ><span data-en="About me" data-zh="关于我"
-                          >About me</span
+                        ><span data-en="Profile" data-zh="个人信息"
+                          >Profile</span
                         ><span class="tab-shortcut">01</span>
                       </button>
                       <button
@@ -286,22 +246,23 @@
                         data-tab="projects"
                       >
                         <svg class="icon"><use href="#i-folder" /></svg
-                        ><span data-en="Projects" data-zh="项目">Projects</span
+                        ><span data-en="Projects" data-zh="个人作品"
+                          >Projects</span
                         ><span class="tab-shortcut">02</span>
                       </button>
                       <button
                         type="button"
                         class="workspace-tab"
-                        id="tab-toolkit"
+                        id="tab-intro"
                         role="tab"
                         aria-selected="false"
-                        aria-controls="panel-toolkit"
+                        aria-controls="panel-intro"
                         tabindex="-1"
-                        data-tab="toolkit"
+                        data-tab="intro"
                       >
                         <svg class="icon"><use href="#i-code" /></svg
-                        ><span data-en="My toolkit" data-zh="技能工具箱"
-                          >My toolkit</span
+                        ><span data-en="Introduction" data-zh="个人介绍"
+                          >Introduction</span
                         ><span class="tab-shortcut">03</span>
                       </button>
                       <button
@@ -315,16 +276,9 @@
                         data-tab="contact"
                       >
                         <svg class="icon"><use href="#i-mail" /></svg
-                        ><span data-en="Let’s connect" data-zh="联系我"
-                          >Let’s connect</span
+                        ><span data-en="Contact" data-zh="联系我">Contact</span
                         ><span class="tab-shortcut">04</span>
                       </button>
-                    </div>
-                    <div class="sidebar-bottom">
-                      <span class="status-dot"></span
-                      ><span data-en="Always learning" data-zh="持续学习中"
-                        >Always learning</span
-                      >
                     </div>
                   </aside>
                   <div class="window-content">
@@ -335,26 +289,10 @@
                       aria-labelledby="tab-about"
                       tabindex="0"
                     >
-                      <div class="file-meta">
-                        <svg class="icon"><use href="#i-terminal" /></svg
-                        ><span>~/haoyu/about.md</span
-                        ><span class="file-badge">README</span>
-                      </div>
                       <div class="intro-heading">
                         <div>
-                          <p
-                            class="panel-kicker"
-                            data-en="A LITTLE INTRODUCTION"
-                            data-zh="先认识一下"
-                          >
-                            A LITTLE INTRODUCTION
-                          </p>
-                          <h2
-                            data-en="Hello, I’m Haoyu."
-                            data-zh="你好，我是 Haoyu。"
-                          >
-                            Hello, I’m Haoyu.
-                          </h2>
+                          <h2 data-en="Profile" data-zh="个人信息">Profile</h2>
+                          <p class="english-translation" lang="en">Profile</p>
                         </div>
                         <img
                           class="panel-avatar"
@@ -364,21 +302,11 @@
                           height="66"
                         />
                       </div>
-                      <p
-                        class="panel-intro"
-                        data-en="I like turning a small idea into something that works. My interests live between practical software, automation, and clean web experiences."
-                        data-zh="我喜欢把一个小小的想法变成真正可用的东西，关注实用软件、自动化，以及简洁自然的网页体验。"
-                      >
-                        I like turning a small idea into something that works.
-                        My interests live between practical software,
-                        automation, and clean web experiences.
-                      </p>
+                      <p class="profile-name">Haoyu Hong</p>
                       <div class="profile-facts">
                         <div>
                           <svg class="icon"><use href="#i-school" /></svg
                           ><span
-                            ><small data-en="EDUCATION" data-zh="教育经历"
-                              >EDUCATION</small
                             ><strong
                               data-en="BSc Computer Science"
                               data-zh="计算机科学本科"
@@ -393,28 +321,11 @@
                         <div>
                           <svg class="icon"><use href="#i-pin" /></svg
                           ><span
-                            ><small data-en="BASED IN" data-zh="所在地"
-                              >BASED IN</small
                             ><strong data-en="United Kingdom" data-zh="英国"
                               >United Kingdom</strong
-                            ><span
-                              data-en="Learning, building, iterating."
-                              data-zh="学习、创造、不断迭代。"
-                              >Learning, building, iterating.</span
                             ></span
                           >
                         </div>
-                      </div>
-                      <div class="terminal-line">
-                        <span class="terminal-prompt">❯</span
-                        ><span
-                          data-en="Small steps. Thoughtful code. Better every day."
-                          data-zh="踏实前进，认真写代码，每天进步一点。"
-                          >Small steps. Thoughtful code. Better every day.</span
-                        ><span
-                          class="terminal-cursor"
-                          aria-hidden="true"
-                        ></span>
                       </div>
                     </section>
                     <section
@@ -425,33 +336,8 @@
                       tabindex="0"
                       hidden
                     >
-                      <div class="file-meta">
-                        <svg class="icon"><use href="#i-folder" /></svg
-                        ><span>~/haoyu/projects</span
-                        ><span class="file-badge">EXPLORER</span>
-                      </div>
-                      <p
-                        class="panel-kicker"
-                        data-en="BUILDING IN THE OPEN"
-                        data-zh="在实践中成长"
-                      >
-                        BUILDING IN THE OPEN
-                      </p>
-                      <h2
-                        data-en="A place for my work."
-                        data-zh="为作品留一片空间。"
-                      >
-                        A place for my work.
-                      </h2>
-                      <p
-                        class="panel-intro"
-                        data-en="A personal website and a tool for making Windows cursors. Small ideas, brought to life one project at a time."
-                        data-zh="一个个人网站，一个制作 Windows 光标的小工具。把小小的想法，一点点做成真正的作品。"
-                      >
-                        A personal website and a tool for making Windows
-                        cursors. Small ideas, brought to life one project at a
-                        time.
-                      </p>
+                      <h2 data-en="Projects" data-zh="个人作品">Projects</h2>
+                      <p class="english-translation" lang="en">Projects</p>
                       <a
                         class="workspace-project"
                         href="https://github.com/Ts1ngyun/Ts1ngyun.github.io"
@@ -460,11 +346,11 @@
                         ><span class="project-folder"
                           ><svg class="icon"><use href="#i-globe" /></svg></span
                         ><span
-                          ><strong data-en="Personal website" data-zh="个人网站"
-                            >Personal website</strong
-                          ><small>HTML · CSS · JavaScript</small></span
-                        ><span class="live-label"
-                          ><span class="status-dot"></span>Live</span
+                          ><strong data-en="Personal Website" data-zh="个人网站"
+                            >Personal Website</strong
+                          ><small class="english-translation" lang="en"
+                            >Personal Website</small
+                          ></span
                         ><svg class="icon"><use href="#i-external" /></svg
                       ></a>
                       <a
@@ -472,104 +358,38 @@
                         href="https://github.com/Ts1ngyun/cursor-atelier"
                         target="_blank"
                         rel="noopener noreferrer"
-                        ><span class="project-folder"
+                        ><span class="project-folder cursor-folder"
                           ><svg class="icon"><use href="#i-spark" /></svg></span
                         ><span
-                          ><strong>Cursor Atelier</strong
-                          ><small
-                            data-en="Custom Windows cursors · CUR / ANI"
-                            data-zh="Windows 光标自定义 · CUR / ANI"
-                            >Custom Windows cursors · CUR / ANI</small
+                          ><strong data-en="Cursor Atelier" data-zh="光标工作室"
+                            >Cursor Atelier</strong
+                          ><small class="english-translation" lang="en"
+                            >Cursor Atelier</small
                           ></span
-                        ><span
-                          class="live-label"
-                          data-en="Open source"
-                          data-zh="开源"
-                          >Open source</span
                         ><svg class="icon"><use href="#i-external" /></svg
                       ></a>
-                      <p
-                        class="panel-note"
-                        data-en="A growing collection, one project at a time."
-                        data-zh="作品慢慢积累，每一步都算数。"
-                      >
-                        A growing collection, one project at a time.
-                      </p>
                     </section>
                     <section
                       class="workspace-panel"
-                      id="panel-toolkit"
+                      id="panel-intro"
                       role="tabpanel"
-                      aria-labelledby="tab-toolkit"
+                      aria-labelledby="tab-intro"
                       tabindex="0"
                       hidden
                     >
-                      <div class="file-meta">
-                        <svg class="icon"><use href="#i-code" /></svg
-                        ><span>~/haoyu/toolkit.json</span
-                        ><span class="file-badge">TOOLKIT</span>
-                      </div>
-                      <p
-                        class="panel-kicker"
-                        data-en="TOOLS I WORK WITH"
-                        data-zh="我的工具箱"
-                      >
-                        TOOLS I WORK WITH
-                      </p>
-                      <h2
-                        data-en="The right tool. A little curiosity."
-                        data-zh="用合适的工具，带一点好奇。"
-                      >
-                        The right tool. A little curiosity.
+                      <h2 data-en="Introduction" data-zh="个人介绍">
+                        Introduction
                       </h2>
-                      <div class="toolkit-list">
-                        <div>
-                          <span class="tool-icon java">J</span
-                          ><span
-                            ><strong>Java</strong
-                            ><small
-                              data-en="Object-oriented programming, debugging & testing"
-                              data-zh="面向对象编程、调试与测试"
-                              >Object-oriented programming, debugging &
-                              testing</small
-                            ></span
-                          >
-                        </div>
-                        <div>
-                          <span class="tool-icon python">Py</span
-                          ><span
-                            ><strong>Python</strong
-                            ><small
-                              data-en="Automation scripts & data processing"
-                              data-zh="自动化脚本与数据处理"
-                              >Automation scripts & data processing</small
-                            ></span
-                          >
-                        </div>
-                        <div>
-                          <span class="tool-icon cpp">C++</span
-                          ><span
-                            ><strong>C++</strong
-                            ><small
-                              data-en="Foundations & problem solving"
-                              data-zh="编程基础与问题求解"
-                              >Foundations & problem solving</small
-                            ></span
-                          >
-                        </div>
-                        <div>
-                          <span class="tool-icon web">&lt;/&gt;</span
-                          ><span
-                            ><strong>HTML / CSS / JavaScript</strong
-                            ><small
-                              data-en="Web fundamentals, versioned with Git & GitHub"
-                              data-zh="网页开发基础，使用 Git 与 GitHub 管理版本"
-                              >Web fundamentals, versioned with Git &
-                              GitHub</small
-                            ></span
-                          >
-                        </div>
-                      </div>
+                      <p class="english-translation" lang="en">Introduction</p>
+                      <p
+                        class="biography"
+                        data-en="I spent six years at Beijing 21CIS and now study in Birmingham. I enjoy photography and drawing. My dream is to travel the world with a camera and the person I love."
+                        data-zh="我在北京21世纪度过了六年时光，目前在伯明翰求学。我热爱摄影和绘画，梦想是带着相机，和喜欢的人一起环游世界。"
+                      >
+                        I spent six years at Beijing 21CIS and now study in
+                        Birmingham. I enjoy photography and drawing. My dream is
+                        to travel the world with a camera and the person I love.
+                      </p>
                     </section>
                     <section
                       class="workspace-panel"
@@ -579,32 +399,8 @@
                       tabindex="0"
                       hidden
                     >
-                      <div class="file-meta">
-                        <svg class="icon"><use href="#i-mail" /></svg
-                        ><span>~/haoyu/hello</span
-                        ><span class="file-badge">CONTACT</span>
-                      </div>
-                      <p
-                        class="panel-kicker"
-                        data-en="GOOD THINGS START WITH A HELLO"
-                        data-zh="好的交流，从一句你好开始"
-                      >
-                        GOOD THINGS START WITH A HELLO
-                      </p>
-                      <h2
-                        data-en="Let’s build something useful."
-                        data-zh="一起做点有用的东西。"
-                      >
-                        Let’s build something useful.
-                      </h2>
-                      <p
-                        class="panel-intro"
-                        data-en="A question, a shared interest, or simply a hello. I’d love to hear from you."
-                        data-zh="一个问题、一份共同的兴趣，或者只是打个招呼。欢迎来聊聊。"
-                      >
-                        A question, a shared interest, or simply a hello. I’d
-                        love to hear from you.
-                      </p>
+                      <h2 data-en="Contact" data-zh="联系我">Contact</h2>
+                      <p class="english-translation" lang="en">Contact</p>
                       <div class="email-bar">
                         <a href="mailto:hehehong2006@gmail.com"
                           >hehehong2006@gmail.com</a
@@ -640,23 +436,13 @@
                 <div class="window-statusbar">
                   <span
                     ><span class="status-dot"></span
-                    ><span data-en="Made with curiosity" data-zh="由好奇心驱动"
-                      >Made with curiosity</span
-                    ></span
-                  ><span
-                    >UTF-8<span class="status-divider">·</span
-                    ><span id="workspace-item-count">01 / 04</span></span
-                  >
+                    ><span lang="en">Always thinking</span></span
+                  ><span><span id="workspace-item-count">01 / 04</span></span>
                 </div>
               </div>
               <div class="desktop-empty" id="desktop-empty" hidden>
                 <svg class="icon"><use href="#i-terminal" /></svg>
-                <p
-                  data-en="Your next idea starts here."
-                  data-zh="下一个想法，从这里开始。"
-                >
-                  Your next idea starts here.
-                </p>
+
                 <button
                   class="button button-primary"
                   type="button"
@@ -673,8 +459,8 @@
                 class="dock-icon dock-about"
                 type="button"
                 data-dock="about"
-                aria-label="Open About me"
-                title="About me"
+                aria-label="Open Profile"
+                title="Profile"
               >
                 <svg class="icon"><use href="#i-user" /></svg></button
               ><button
@@ -686,11 +472,11 @@
               >
                 <svg class="icon"><use href="#i-folder" /></svg></button
               ><button
-                class="dock-icon dock-toolkit"
+                class="dock-icon dock-intro"
                 type="button"
-                data-dock="toolkit"
-                aria-label="Open My toolkit"
-                title="My toolkit"
+                data-dock="intro"
+                aria-label="Open Introduction"
+                title="Introduction"
               >
                 <svg class="icon"><use href="#i-terminal" /></svg></button
               ><span class="dock-divider"></span
@@ -713,15 +499,6 @@
               ></a>
             </div>
           </div>
-          <p class="workspace-caption">
-            <span class="caption-line"></span
-            ><span
-              data-en="Not just a preview. Click around — it’s your space to explore."
-              data-zh="不止是展示。点一点，随意探索我的工作空间。"
-              >Not just a preview. Click around — it’s your space to
-              explore.</span
-            ><span class="caption-line"></span>
-          </p>
         </div>
       </section>
 
@@ -731,37 +508,17 @@
         aria-labelledby="about-title"
       >
         <div class="section-heading reveal">
-          <p
-            class="eyebrow"
-            data-en="01 / A LIFE IN THE MAKING"
-            data-zh="01 / 人生，正在搭建"
+          <p class="eyebrow">01</p>
+          <h2
+            id="about-title"
+            data-en="Programming Languages"
+            data-zh="编程语言"
           >
-            01 / A LIFE IN THE MAKING
-          </p>
-          <h2 id="about-title">
-            <span data-en="A little life." data-zh="我的人生，"
-              >A little life.</span
-            ><br /><span
-              class="soft-heading"
-              data-en="Just getting started."
-              data-zh="刚刚起步。"
-              >Just getting started.</span
-            >
+            Programming Languages
           </h2>
-          <p
-            data-en="Places I’ve learned. Things I love. A few sides of who I am."
-            data-zh="走过的地方，喜欢的事情。转一转，认识不同侧面的我。"
-          >
-            Places I’ve learned. Things I love. A few sides of who I am.
-          </p>
         </div>
         <div class="life-exhibit reveal">
           <div class="building-scene" aria-hidden="true">
-            <span class="scene-corner scene-corner-left"
-              >HAOYU / A LITTLE WORLD</span
-            ><span class="scene-corner scene-corner-right"
-              >FOUR SIDES. ONE STORY.</span
-            >
             <div class="scene-halo"></div>
             <div class="scene-grid"></div>
             <div class="building-shadow"></div>
@@ -771,41 +528,15 @@
                 id="life-building"
                 style="--building-turn: -25deg"
               >
-                <div
-                  class="building-face face-roots"
-                  style="--face-angle: 0deg"
-                >
+                <div class="building-face face-java" style="--face-angle: 0deg">
                   <div class="facade-cornice"></div>
                   <div class="attic-windows"><i></i><i></i><i></i></div>
-                  <div class="facade-sign">
-                    <span
-                      >01 /
-                      <span data-en="ROOTS" data-zh="起点">ROOTS</span></span
+                  <div class="facade-sign"><h3>Java</h3></div>
+                  <div class="language-window">
+                    <strong class="language-glyph">J</strong
+                    ><code
+                      >System.out.println(<br />&nbsp;&nbsp;"Hello, world."<br />);</code
                     >
-                    <h3 data-en="Beijing 21CIS" data-zh="Beijing 21CIS">
-                      Beijing 21CIS
-                    </h3>
-                  </div>
-                  <div class="facade-awning"></div>
-                  <div class="facade-showcase">
-                    <div class="capability-art art-code" aria-hidden="true">
-                      <div class="code-paper">
-                        <span class="code-file"
-                          ><span class="tiny-dot"></span>Main.java</span
-                        ><code
-                          ><span class="code-purple">public class</span>
-                          <span class="code-gold">Hello</span> {<br />&nbsp;
-                          <span class="code-purple">void</span> build() {<br />&nbsp;
-                          &nbsp; learn();<br />&nbsp; &nbsp; create();<br />&nbsp;
-                          &nbsp;
-                          <span class="code-green">// keep improving</span
-                          ><br />&nbsp; }<br />}</code
-                        ><span class="code-success"
-                          ><svg class="icon"><use href="#i-check" /></svg>Build
-                          successful</span
-                        >
-                      </div>
-                    </div>
                   </div>
                   <div class="facade-ground">
                     <span class="shop-number">01</span
@@ -814,53 +545,15 @@
                   </div>
                 </div>
                 <div
-                  class="building-face face-learning"
+                  class="building-face face-python"
                   style="--face-angle: 90deg"
                 >
                   <div class="facade-cornice"></div>
                   <div class="attic-windows"><i></i><i></i><i></i></div>
-                  <div class="facade-sign">
-                    <span
-                      >02 /
-                      <span data-en="LEARNING" data-zh="求知"
-                        >LEARNING</span
-                      ></span
-                    >
-                    <h3
-                      data-en="University of Birmingham"
-                      data-zh="University of Birmingham"
-                    >
-                      University of Birmingham
-                    </h3>
-                  </div>
-                  <div class="facade-awning"></div>
-                  <div class="facade-showcase">
-                    <div
-                      class="capability-art art-automation"
-                      aria-hidden="true"
-                    >
-                      <div class="flow">
-                        <div class="flow-node">
-                          <svg class="icon"><use href="#i-folder" /></svg
-                          ><span>input</span>
-                        </div>
-                        <span class="flow-connector"></span>
-                        <div class="flow-node flow-python">
-                          Py<span>script.py</span>
-                        </div>
-                        <span class="flow-connector"></span>
-                        <div class="flow-node">
-                          <svg class="icon"><use href="#i-check" /></svg
-                          ><span>done</span>
-                        </div>
-                      </div>
-                      <div class="automation-console">
-                        <span class="terminal-prompt">❯</span> python
-                        make_it_simple.py<br /><span class="console-output"
-                          >Less repetition. More possibility.</span
-                        >
-                      </div>
-                    </div>
+                  <div class="facade-sign"><h3>Python</h3></div>
+                  <div class="language-window">
+                    <strong class="language-glyph">Py</strong
+                    ><code>print(<br />&nbsp;&nbsp;"Hello, world."<br />)</code>
                   </div>
                   <div class="facade-ground">
                     <span class="shop-number">02</span
@@ -869,36 +562,18 @@
                   </div>
                 </div>
                 <div
-                  class="building-face face-photography"
+                  class="building-face face-cpp"
                   style="--face-angle: 180deg"
                 >
                   <div class="facade-cornice"></div>
                   <div class="attic-windows"><i></i><i></i><i></i></div>
-                  <div class="facade-sign">
-                    <span
-                      >03 /
-                      <span data-en="OBSERVING" data-zh="观察"
-                        >OBSERVING</span
-                      ></span
+                  <div class="facade-sign"><h3>C++</h3></div>
+                  <div class="language-window">
+                    <strong class="language-glyph">C++</strong
+                    ><code
+                      >std::cout<br />&nbsp;&nbsp;&lt;&lt; "Hello, world."<br />&nbsp;&nbsp;&lt;&lt;
+                      std::endl;</code
                     >
-                    <h3 data-en="Photography enthusiast" data-zh="摄影爱好者">
-                      Photography enthusiast
-                    </h3>
-                  </div>
-                  <div class="facade-awning"></div>
-                  <div class="facade-showcase">
-                    <div class="photo-window">
-                      <div class="photo-print">
-                        <img
-                          src="assets/background.webp"
-                          alt=""
-                          width="2048"
-                          height="1016"
-                          loading="lazy"
-                        /><span>light / moments / stories</span>
-                      </div>
-                      <div class="mini-camera"><i></i><span></span></div>
-                    </div>
                   </div>
                   <div class="facade-ground">
                     <span class="shop-number">03</span
@@ -907,44 +582,17 @@
                   </div>
                 </div>
                 <div
-                  class="building-face face-drawing"
+                  class="building-face face-javascript"
                   style="--face-angle: 270deg"
                 >
                   <div class="facade-cornice"></div>
                   <div class="attic-windows"><i></i><i></i><i></i></div>
-                  <div class="facade-sign">
-                    <span
-                      >04 /
-                      <span data-en="CREATING" data-zh="创作"
-                        >CREATING</span
-                      ></span
+                  <div class="facade-sign"><h3>JavaScript</h3></div>
+                  <div class="language-window">
+                    <strong class="language-glyph">JS</strong
+                    ><code
+                      >console.log(<br />&nbsp;&nbsp;"Hello, world."<br />);</code
                     >
-                    <h3 data-en="Drawing enthusiast" data-zh="绘画爱好者">
-                      Drawing enthusiast
-                    </h3>
-                  </div>
-                  <div class="facade-awning"></div>
-                  <div class="facade-showcase">
-                    <div class="capability-art art-web" aria-hidden="true">
-                      <div class="mini-browser">
-                        <div class="mini-browser-bar">
-                          <i></i><i></i><i></i><span>localhost</span>
-                        </div>
-                        <div class="mini-browser-content">
-                          <span class="mini-tag"></span
-                          ><span class="mini-title"></span
-                          ><span class="mini-title short"></span
-                          ><span class="mini-text"></span
-                          ><span class="mini-button"></span>
-                          <div class="mini-cards"><i></i><i></i><i></i></div>
-                        </div>
-                        <div class="cursor-art">
-                          <svg viewBox="0 0 24 24">
-                            <path d="m4 2 15 12-8 1-4 7Z" /></svg
-                          ><span>make it feel right</span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                   <div class="facade-ground">
                     <span class="shop-number">04</span
@@ -955,7 +603,7 @@
                 <div class="building-roof">
                   <span class="roof-lines"></span
                   ><span class="roof-skylight"></span
-                  ><span class="roof-wordmark">hello, life<span>.</span></span>
+                  ><span class="roof-wordmark">&lt;/&gt;</span>
                 </div>
                 <div class="building-plinth"></div>
                 <div class="plinth-edge" style="--face-angle: 0deg"></div>
@@ -964,9 +612,6 @@
                 <div class="plinth-edge" style="--face-angle: 270deg"></div>
               </div>
             </div>
-            <span class="scene-ground-label"
-              >STILL EXPLORING · STILL BECOMING</span
-            >
           </div>
           <div
             class="building-controls"
@@ -990,10 +635,7 @@
                 aria-pressed="true"
                 aria-controls="life-building"
               >
-                <span class="stop-number">01</span
-                ><span data-en="Beijing 21CIS" data-zh="Beijing 21CIS"
-                  >Beijing 21CIS</span
-                ></button
+                <span class="stop-number">01</span><span>Java</span></button
               ><button
                 type="button"
                 class="building-stop"
@@ -1001,12 +643,7 @@
                 aria-pressed="false"
                 aria-controls="life-building"
               >
-                <span class="stop-number">02</span
-                ><span
-                  data-en="University of Birmingham"
-                  data-zh="University of Birmingham"
-                  >University of Birmingham</span
-                ></button
+                <span class="stop-number">02</span><span>Python</span></button
               ><button
                 type="button"
                 class="building-stop"
@@ -1014,10 +651,7 @@
                 aria-pressed="false"
                 aria-controls="life-building"
               >
-                <span class="stop-number">03</span
-                ><span data-en="Photography enthusiast" data-zh="摄影爱好者"
-                  >Photography enthusiast</span
-                ></button
+                <span class="stop-number">03</span><span>C++</span></button
               ><button
                 type="button"
                 class="building-stop"
@@ -1025,10 +659,7 @@
                 aria-pressed="false"
                 aria-controls="life-building"
               >
-                <span class="stop-number">04</span
-                ><span data-en="Drawing enthusiast" data-zh="绘画爱好者"
-                  >Drawing enthusiast</span
-                >
+                <span class="stop-number">04</span><span>JavaScript</span>
               </button>
             </div>
             <button
@@ -1047,14 +678,7 @@
             aria-live="polite"
             aria-atomic="true"
           >
-            01 / 04 — Beijing 21CIS
-          </p>
-          <p
-            class="building-hint"
-            data-en="Use the arrows or choose a side to take a look around."
-            data-zh="点击箭头旋转，或选择一个侧面看看。"
-          >
-            Use the arrows or choose a side to take a look around.
+            01 / 04 — Java
           </p>
         </div>
       </section>
@@ -1073,12 +697,8 @@
             >
               02 / SELECTED WORK
             </p>
-            <h2
-              id="work-title"
-              data-en="Always a work in progress."
-              data-zh="作品，也在持续生长。"
-            >
-              Always a work in progress.
+            <h2 id="work-title" data-en="Projects" data-zh="个人作品">
+              Projects
             </h2>
           </div>
           <a
@@ -1107,8 +727,7 @@
               <div class="preview-main">
                 <span class="preview-monogram">h<span>.</span></span
                 ><span class="preview-label">A PERSONAL SPACE ON THE WEB</span
-                ><strong
-                  >Built to explore.<br /><span>Made to evolve.</span></strong
+                ><strong>Then,<br /><span>toward tomorrow.</span></strong
                 ><span class="preview-button"
                   >Hello, world. <svg class="icon"><use href="#i-arrow" /></svg
                 ></span>
@@ -1118,18 +737,14 @@
           </div>
           <div class="project-description">
             <span class="project-index">001 <span>/</span> WEB EXPERIENCE</span>
-            <h3
-              data-en="My corner of the internet."
-              data-zh="互联网上，我的小小一角。"
-            >
-              My corner of the internet.
+            <h3 data-en="Personal Website" data-zh="个人网站">
+              Personal Website
             </h3>
             <p
-              data-en="A personal home for what I’m learning and building. A familiar desktop, a thoughtful interface, and room for whatever comes next."
-              data-zh="为学习与创作安一个家。熟悉的桌面、用心的界面，也为接下来的每个想法留出空间。"
+              data-en="A little world of my own, with space for ideas yet to come."
+              data-zh="为自己打造一片小天地，为尚未出现的想法留一处空间。"
             >
-              A personal home for what I’m learning and building. A familiar
-              desktop, a thoughtful interface, and room for whatever comes next.
+              A little world of my own, with space for ideas yet to come.
             </p>
             <div class="project-tags">
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
@@ -1155,9 +770,9 @@
             <h3>
               Cursor Atelier<span
                 class="project-subtitle"
-                data-en="A little character. In every click."
-                data-zh="让每一次点击，都有一点个性。"
-                >A little character. In every click.</span
+                data-en="Custom Cursors"
+                data-zh="自定义光标"
+                >Custom Cursors</span
               >
             </h3>
             <p
@@ -1253,49 +868,22 @@
         </article>
         <p class="work-note reveal">
           <svg class="icon"><use href="#i-spark" /></svg
-          ><span
-            data-en="More projects are taking shape. This space will grow with them."
-            data-zh="更多项目正在酝酿中，这里会和它们一起成长。"
-            >More projects are taking shape. This space will grow with
-            them.</span
+          ><span data-en="Generating new ideas..." data-zh="新点子生成中..."
+            >Generating new ideas...</span
           >
         </p>
       </section>
 
       <section
-        class="contact-section section-container"
+        class="contact-section section-container contact-compact"
         id="contact"
         aria-labelledby="contact-title"
       >
         <div class="contact-glow" aria-hidden="true"></div>
         <div class="reveal">
-          <p class="eyebrow">
-            <span class="status-dot"></span
-            ><span data-en="ALWAYS HAPPY TO CONNECT" data-zh="欢迎交流"
-              >ALWAYS HAPPY TO CONNECT</span
-            >
-          </p>
-          <h2 id="contact-title">
-            <span data-en="Have an idea?" data-zh="有个想法？"
-              >Have an idea?</span
-            ><br /><span
-              class="soft-heading"
-              data-en="Let’s make it happen."
-              data-zh="一起把它变成现实。"
-              >Let’s make it happen.</span
-            >
+          <h2 id="contact-title" data-en="Contact me" data-zh="与我联系">
+            Contact me
           </h2>
-          <p
-            data-en="A project, a question, or just a hello. My inbox is open."
-            data-zh="一个项目、一个问题，或者只是打声招呼。欢迎来信。"
-          >
-            A project, a question, or just a hello. My inbox is open.
-          </p>
-          <a class="button button-primary" href="mailto:hehehong2006@gmail.com"
-            ><svg class="icon"><use href="#i-mail" /></svg
-            ><span data-en="Say hello" data-zh="打个招呼">Say hello</span
-            ><svg class="icon"><use href="#i-external" /></svg
-          ></a>
           <div class="contact-email">
             <a href="mailto:hehehong2006@gmail.com">hehehong2006@gmail.com</a
             ><button
@@ -1316,16 +904,7 @@
         ><span class="brand-symbol">h<span>.</span></span
         ><span>Haoyu Hong</span></a
       >
-      <p>
-        © <span id="copyright-year">2026</span> Haoyu Hong<span
-          class="footer-dot"
-          >·</span
-        ><span
-          data-en="Built with care & curiosity."
-          data-zh="认真创造，保持好奇。"
-          >Built with care & curiosity.</span
-        >
-      </p>
+      <p>© <span id="copyright-year">2026</span> Haoyu Hong</p>
       <div class="footer-links">
         <a
           href="https://github.com/Ts1ngyun"
@@ -1338,7 +917,9 @@
           rel="noopener noreferrer"
           >LinkedIn<svg class="icon"><use href="#i-external" /></svg></a
         ><a href="#" class="back-top" aria-label="Back to top"
-          ><svg class="icon"><use href="#i-down" /></svg
+          ><span lang="en">Rolling back the year</span
+          ><span class="back-top-icon"
+            ><svg class="icon"><use href="#i-down" /></svg></span
         ></a>
       </div>
     </footer>

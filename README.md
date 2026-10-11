@@ -6,13 +6,13 @@ Live: [ts1ngyun.github.io](https://ts1ngyun.github.io/)
 
 ## Features
 
-- Interactive About, Projects, Toolkit, and Contact tabs, including keyboard navigation.
+- Interactive Profile, Projects, Introduction, and Contact tabs, including keyboard navigation.
 - Working window controls and Dock shortcuts; Escape exits the expanded workspace.
-- English and Chinese with a saved language preference.
+- English and Chinese with a saved language preference, and a shared English welcome.
 - Responsive layouts, reduced-motion support, and accessible focus states.
 - Email links and a copy-address button with a manual-copy fallback.
 - Original avatar and city wallpaper retained in the new design.
-- A button-controlled 3D building with four sides: Beijing 21CIS, University of Birmingham, photography, and drawing. The original code, automation, and web illustrations live in its windows.
+- A compact, button-controlled 3D building decorated with Java, Python, C++, and JavaScript typography and code.
 - A dedicated [Cursor Atelier](https://github.com/Ts1ngyun/cursor-atelier) project showcase with an interactive cursor color preview.
 
 ## Edit and preview
@@ -27,6 +27,8 @@ Open `index.html` directly for a basic preview, or serve the directory through a
 ## About
 
 BSc Computer Science, University of Birmingham (2025–2028).
+
+I spent six years at Beijing 21CIS and now study in Birmingham. I enjoy photography and drawing. My dream is to travel the world with a camera and the person I love.
 
 - Email: [hehehong2006@gmail.com](mailto:hehehong2006@gmail.com)
 - GitHub: [Ts1ngyun](https://github.com/Ts1ngyun)

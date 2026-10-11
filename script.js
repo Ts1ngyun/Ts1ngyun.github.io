@@ -8,19 +8,19 @@
   const windowBody = $("#window-body");
   const emptyDesktop = $("#desktop-empty");
   const tabs = $$(".workspace-tab");
-  const sections = ["about", "projects", "toolkit", "contact"];
+  const sections = ["about", "projects", "intro", "contact"];
   const filenames = {
-    about: "about.md",
-    projects: "projects",
-    toolkit: "toolkit.json",
-    contact: "hello",
+    about: ["Profile", "个人信息"],
+    projects: ["Projects", "个人作品"],
+    intro: ["Introduction", "个人介绍"],
+    contact: ["Contact", "联系我"],
   };
   const lifeBuilding = $("#life-building");
   const buildingNames = [
-    ["Beijing 21CIS", "Beijing 21CIS"],
-    ["University of Birmingham", "University of Birmingham"],
-    ["Photography enthusiast", "摄影爱好者"],
-    ["Drawing enthusiast", "绘画爱好者"],
+    ["Java", "Java"],
+    ["Python", "Python"],
+    ["C++", "C++"],
+    ["JavaScript", "JavaScript"],
   ];
   let buildingStep = 0;
   let activeTab = "about";
@@ -48,9 +48,9 @@
     workspace: ["Interactive personal workspace", "可交互的个人工作空间"],
     tabs: ["Workspace sections", "工作空间栏目"],
     dock: ["Workspace shortcuts", "工作空间快捷入口"],
-    dockAbout: ["Open About me", "打开关于我"],
-    dockProjects: ["Open Projects", "打开项目"],
-    dockToolkit: ["Open My toolkit", "打开技能工具箱"],
+    dockAbout: ["Open Profile", "打开个人信息"],
+    dockProjects: ["Open Projects", "打开个人作品"],
+    dockIntro: ["Open Introduction", "打开个人介绍"],
     dockContact: ["Open Contact", "打开联系我"],
     rotateLeft: ["Rotate building left", "向左旋转建筑"],
     rotateRight: ["Rotate building right", "向右旋转建筑"],
@@ -103,13 +103,11 @@
       ),
     );
     document.title =
-      language === "zh"
-        ? "Haoyu Hong — 以好奇心，写下代码"
-        : "Haoyu Hong — Curiosity into code";
+      language === "zh" ? "Haoyu Hong — 个人网站" : "Haoyu Hong — Portfolio";
     $('meta[name="description"]').content =
       language === "zh"
-        ? "Haoyu Hong，伯明翰大学计算机科学学生。探索软件开发、自动化与简洁自然的网页体验。"
-        : "Haoyu Hong — Computer Science student at the University of Birmingham. Exploring software, automation, and thoughtful web experiences.";
+        ? "Haoyu Hong，伯明翰大学计算机科学学生。"
+        : "Haoyu Hong — Computer Science student at the University of Birmingham.";
     const targets = {
       ".site-header .brand": "home",
       ".main-nav": "navigation",
@@ -119,7 +117,7 @@
       ".dock": "dock",
       '[data-dock="about"]': "dockAbout",
       '[data-dock="projects"]': "dockProjects",
-      '[data-dock="toolkit"]': "dockToolkit",
+      '[data-dock="intro"]': "dockIntro",
       '[data-dock="contact"]': "dockContact",
       '[data-rotate="-1"]': "rotateLeft",
       '[data-rotate="1"]': "rotateRight",
@@ -135,6 +133,8 @@
     updateControlLabels();
     updateClock();
     renderBuilding();
+    $("#window-filename").textContent =
+      filenames[activeTab][language === "zh" ? 1 : 0];
     if (persist) {
       try {
         localStorage.setItem("haoyu-language", language);
@@ -175,7 +175,8 @@
     $$("[data-dock]").forEach((button) => {
       button.dataset.active = String(button.dataset.dock === name);
     });
-    $("#window-filename").textContent = filenames[name];
+    $("#window-filename").textContent =
+      filenames[name][language === "zh" ? 1 : 0];
     $("#workspace-item-count").textContent =
       `0${sections.indexOf(name) + 1} / 04`;
   }
