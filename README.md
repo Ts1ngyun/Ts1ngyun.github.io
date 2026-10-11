@@ -28,7 +28,7 @@ Open `index.html` directly for a basic preview, or serve the directory through a
 
 BSc Computer Science, University of Birmingham (2025–2028).
 
-I spent six years at Beijing 21CIS and now study in Birmingham. I enjoy photography and drawing. My dream is to travel the world with a camera and the person I love.
+I’m an undergraduate student who moved to the UK to study after spending six years at Beijing 21CIS. I’m passionate about everything related to computers, and my hobbies are photography and drawing.
 
 - Email: [hehehong2006@gmail.com](mailto:hehehong2006@gmail.com)
 - GitHub: [Ts1ngyun](https://github.com/Ts1ngyun)
