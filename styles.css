@@ -733,10 +733,6 @@ svg.icon {
   background: linear-gradient(145deg, #a8c6ee, #698cc5);
   color: #20385e;
 }
-.dock-intro {
-  background: linear-gradient(145deg, #343942, #14191f);
-  color: #dcebd7;
-}
 .dock-contact {
   background: linear-gradient(145deg, #69b2ef, #367edb);
   color: #fff;
@@ -1247,6 +1243,7 @@ svg.icon {
 }
 .work-section {
   padding-top: 132px;
+  padding-bottom: clamp(48px, 5vw, 72px);
 }
 .work-heading {
   display: flex;
@@ -2426,7 +2423,7 @@ html[lang="zh-CN"] .workspace-panel h2 {
 }
 .building-scene {
   position: relative;
-  height: 410px;
+  height: 350px;
   perspective: 1150px;
   perspective-origin: 50% 40%;
   overflow: clip;
@@ -2466,7 +2463,8 @@ html[lang="zh-CN"] .workspace-panel h2 {
 .building-position {
   position: absolute;
   width: 248px;
-  height: 230px;
+  --building-height: 170px;
+  height: var(--building-height);
   left: 50%;
   top: 47%;
   transform: translate(-50%, -50%);
@@ -2485,35 +2483,12 @@ html[lang="zh-CN"] .workspace-panel h2 {
   inset: 0;
   backface-visibility: hidden;
   transform: rotateY(var(--face-angle)) translateZ(124px);
-  background:
-    linear-gradient(
-      90deg,
-      #00000008,
-      transparent 10%,
-      transparent 90%,
-      #00000012
-    ),
-    var(--facade-color);
+  background: #bdbdb8;
+  opacity: 1;
   box-shadow:
     inset 0 0 0 1px #ffffff4a,
     inset 0 -6px 0 #2b3c4b33;
   color: #203345;
-}
-.face-java {
-  --facade-color: #c6d3dc;
-  --awning-color: #586f84;
-}
-.face-python {
-  --facade-color: #d4cfbd;
-  --awning-color: #7c7865;
-}
-.face-cpp {
-  --facade-color: #bdcdc5;
-  --awning-color: #577568;
-}
-.face-javascript {
-  --facade-color: #d5c4c6;
-  --awning-color: #8c6d78;
 }
 .facade-cornice {
   position: absolute;
@@ -2528,7 +2503,7 @@ html[lang="zh-CN"] .workspace-panel h2 {
 }
 .attic-windows {
   position: absolute;
-  top: 26px;
+  top: 17px;
   left: 34px;
   right: 34px;
   display: flex;
@@ -2536,17 +2511,17 @@ html[lang="zh-CN"] .workspace-panel h2 {
 }
 .attic-windows i {
   width: 39px;
-  height: 19px;
+  height: 14px;
   background: linear-gradient(135deg, #b9d4e13b, transparent 65%), #354958;
   border: 3px solid #7b909e;
   box-shadow: 0 2px 0 #fff4;
 }
 .facade-sign {
   position: absolute;
-  top: 52px;
+  top: 36px;
   left: 18px;
   right: 18px;
-  height: 40px;
+  height: 25px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -2574,7 +2549,7 @@ html[lang="zh-CN"] .workspace-panel h2 {
   position: absolute;
   left: 18px;
   right: 18px;
-  top: 177px;
+  top: 128px;
   bottom: 6px;
   display: flex;
   align-items: flex-end;
@@ -2583,14 +2558,14 @@ html[lang="zh-CN"] .workspace-panel h2 {
 .shop-number {
   font: 14px/1 var(--mono);
   color: #354c5c;
-  margin: 0 0 18px 9px;
+  margin: 0 0 12px 9px;
 }
 .shop-door {
   position: absolute;
   left: 83px;
   bottom: 0;
   width: 42px;
-  height: 43px;
+  height: 34px;
   border: 4px solid #3b4e5c;
   border-bottom: 0;
   background: linear-gradient(110deg, #b9d3df26, #344d61 80%), #405b6b;
@@ -2601,12 +2576,12 @@ html[lang="zh-CN"] .workspace-panel h2 {
   top: 2px;
   left: 2px;
   right: 2px;
-  height: 26px;
+  height: 18px;
   border: 1px solid #b5c6c442;
 }
 .shop-door i {
   position: absolute;
-  top: 29px;
+  top: 21px;
   right: 4px;
   width: 2px;
   height: 8px;
@@ -2626,7 +2601,7 @@ html[lang="zh-CN"] .workspace-panel h2 {
   position: absolute;
   bottom: 9px;
   width: 11px;
-  height: 25px;
+  height: 18px;
   background: #577360;
   border-radius: 90% 10% 80% 20%;
   transform: rotate(-25deg);
@@ -2636,13 +2611,13 @@ html[lang="zh-CN"] .workspace-panel h2 {
 }
 .shop-planter i:nth-child(2) {
   left: 13px;
-  height: 31px;
+  height: 24px;
   transform: rotate(8deg);
   background: #6c8c76;
 }
 .shop-planter i:nth-child(3) {
   left: 23px;
-  height: 21px;
+  height: 17px;
   transform: rotate(30deg);
 }
 .building-roof {
@@ -2652,10 +2627,10 @@ html[lang="zh-CN"] .workspace-panel h2 {
   top: -124px;
   left: 0;
   transform: rotateX(90deg);
-  background: #435563;
+  background: #656866;
   box-shadow:
-    inset 0 0 0 6px #718391,
-    inset 0 0 0 9px #263b4d;
+    inset 0 0 0 6px #90938f,
+    inset 0 0 0 9px #4e534f;
   backface-visibility: hidden;
 }
 .roof-lines {
@@ -2692,24 +2667,24 @@ html[lang="zh-CN"] .workspace-panel h2 {
 }
 .building-plinth {
   position: absolute;
-  top: 78px;
+  top: calc(var(--building-height) - 152px);
   left: -28px;
   width: 304px;
   height: 304px;
   transform: rotateX(90deg);
-  background: #82919b;
+  background: #92958f;
   box-shadow:
-    inset 0 0 0 3px #aebcc4,
-    inset 0 0 0 18px #73818c;
+    inset 0 0 0 3px #bcbfb8,
+    inset 0 0 0 18px #81867f;
 }
 .plinth-edge {
   position: absolute;
-  top: 230px;
+  top: var(--building-height);
   left: -28px;
   width: 304px;
   height: 14px;
   transform: rotateY(var(--face-angle)) translateZ(152px);
-  background: linear-gradient(#627580, #344853);
+  background: linear-gradient(#7a8078, #525a52);
   backface-visibility: hidden;
 }
 .building-controls {
@@ -2776,12 +2751,6 @@ html[lang="zh-CN"] .workspace-panel h2 {
 .building-stop:hover {
   border-color: #93b6e44f;
   color: #eef4ff;
-}
-.building-status {
-  text-align: center;
-  margin-top: 24px;
-  font: 11px/1.5 var(--mono);
-  color: #c0cde0;
 }
 /* A purpose-designed miniature editor for Cursor Atelier. */
 .featured-project + .featured-project {
@@ -3046,7 +3015,7 @@ html[lang="zh-CN"] .workspace-panel h2 {
     min-height: 445px;
   }
   .building-scene {
-    height: 500px;
+    height: 320px;
   }
   .building-position {
     transform: translate(-50%, -50%) scale(0.91);
@@ -3066,10 +3035,6 @@ html[lang="zh-CN"] .workspace-panel h2 {
   .rotate-button {
     flex-basis: 39px;
     height: 39px;
-  }
-  .building-status {
-    margin-top: 20px;
-    font-size: 10px;
   }
   .cursor-project {
     grid-template-columns: 1fr;
@@ -3139,7 +3104,7 @@ html[lang="zh-CN"] .workspace-panel h2 {
     margin-top: 22px;
   }
   .building-scene {
-    height: 433px;
+    height: 280px;
     margin-inline: -8px;
   }
   .building-position {
@@ -3178,9 +3143,6 @@ html[lang="zh-CN"] .workspace-panel h2 {
   .building-stop .stop-number {
     font-size: 7px;
   }
-  .building-status {
-    font-size: 9px;
-  }
   .cursor-visual {
     padding: 28px 20px 22px;
     min-height: 340px;
@@ -3194,7 +3156,7 @@ html[lang="zh-CN"] .workspace-panel h2 {
     transform: translate(-50%, -50%) scale(0.67);
   }
   .building-scene {
-    height: 390px;
+    height: 250px;
   }
   .building-stop {
     font-size: 8px;
@@ -3265,11 +3227,11 @@ html[lang="en"] .window-content .english-translation {
 }
 .language-window {
   position: absolute;
-  top: 101px;
+  top: 66px;
   left: 18px;
   right: 18px;
-  height: 73px;
-  padding: 12px;
+  height: 56px;
+  padding: 7px 12px;
   display: flex;
   align-items: center;
   gap: 13px;
@@ -3345,7 +3307,7 @@ html[lang="en"] .window-content .english-translation {
 }
 @media (max-width: 760px) {
   .building-scene {
-    height: 350px;
+    height: 300px;
   }
   .window-content .biography {
     font-size: 14px;
@@ -3381,7 +3343,7 @@ html[lang="en"] .window-content .english-translation {
     font-size: 10px;
   }
   .building-scene {
-    height: 325px;
+    height: 275px;
   }
   .building-stop {
     min-height: 52px;
@@ -3404,10 +3366,36 @@ html[lang="en"] .window-content .english-translation {
 }
 @media (max-width: 360px) {
   .building-scene {
-    height: 300px;
+    height: 250px;
   }
   .footer-links {
     column-gap: 12px;
     font-size: 9px;
+  }
+}
+
+/* Profile and biography share the same sidebar and Dock destination. */
+.window-content #panel-about .profile-name {
+  margin-top: 28px;
+}
+.window-content #panel-about .biography {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.window-content #panel-about .profile-facts {
+  margin-top: 26px;
+}
+@media (max-width: 480px) {
+  .window-content #panel-about .profile-name {
+    margin-top: 23px;
+  }
+  .window-content #panel-about .biography {
+    font-size: 12px;
+    line-height: 1.85;
+    margin-top: 17px;
+  }
+  .window-content #panel-about .profile-facts {
+    margin-top: 21px;
   }
 }

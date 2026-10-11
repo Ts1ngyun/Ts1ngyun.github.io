@@ -6,13 +6,13 @@ Live: [ts1ngyun.github.io](https://ts1ngyun.github.io/)
 
 ## Features
 
-- Interactive Profile, Projects, Introduction, and Contact tabs, including keyboard navigation.
+- Three interactive tabs — About me (profile and biography), Projects, and Contact — with matching Dock shortcuts and keyboard navigation.
 - Working window controls and Dock shortcuts; Escape exits the expanded workspace.
 - English and Chinese with a saved language preference, and a shared English welcome.
 - Responsive layouts, reduced-motion support, and accessible focus states.
 - Email links and a copy-address button with a manual-copy fallback.
 - Original avatar and city wallpaper retained in the new design.
-- A compact, button-controlled 3D building decorated with Java, Python, C++, and JavaScript typography and code.
+- A low, opaque gray 3D building controlled by buttons and decorated with Java, Python, C++, and JavaScript typography and code.
 - A dedicated [Cursor Atelier](https://github.com/Ts1ngyun/cursor-atelier) project showcase with an interactive cursor color preview.
 
 ## Edit and preview

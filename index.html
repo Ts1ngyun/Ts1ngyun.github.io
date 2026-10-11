@@ -19,8 +19,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://ts1ngyun.github.io/" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=4ba9e5621d" />
+    <script src="script.js?v=bbd0c11ccf" defer></script>
     <title>Haoyu Hong — Portfolio</title>
   </head>
   <body>
@@ -106,7 +106,13 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#about" data-en="About" data-zh="关于">About</a>
         <a href="#work" data-en="Work" data-zh="作品">Work</a>
-        <a href="#contact" data-en="Contact" data-zh="联系">Contact</a>
+        <a
+          href="#workspace"
+          data-open-workspace="contact"
+          data-en="Contact"
+          data-zh="联系"
+          >Contact</a
+        >
       </nav>
       <div class="language-switch" role="group" aria-label="Language">
         <button type="button" data-lang="zh" aria-pressed="false">中</button>
@@ -231,8 +237,8 @@
                         data-tab="about"
                       >
                         <svg class="icon"><use href="#i-user" /></svg
-                        ><span data-en="Profile" data-zh="个人信息"
-                          >Profile</span
+                        ><span data-en="About me" data-zh="个人介绍"
+                          >About me</span
                         ><span class="tab-shortcut">01</span>
                       </button>
                       <button
@@ -250,21 +256,7 @@
                           >Projects</span
                         ><span class="tab-shortcut">02</span>
                       </button>
-                      <button
-                        type="button"
-                        class="workspace-tab"
-                        id="tab-intro"
-                        role="tab"
-                        aria-selected="false"
-                        aria-controls="panel-intro"
-                        tabindex="-1"
-                        data-tab="intro"
-                      >
-                        <svg class="icon"><use href="#i-code" /></svg
-                        ><span data-en="Introduction" data-zh="个人介绍"
-                          >Introduction</span
-                        ><span class="tab-shortcut">03</span>
-                      </button>
+
                       <button
                         type="button"
                         class="workspace-tab"
@@ -277,7 +269,7 @@
                       >
                         <svg class="icon"><use href="#i-mail" /></svg
                         ><span data-en="Contact" data-zh="联系我">Contact</span
-                        ><span class="tab-shortcut">04</span>
+                        ><span class="tab-shortcut">03</span>
                       </button>
                     </div>
                   </aside>
@@ -291,8 +283,10 @@
                     >
                       <div class="intro-heading">
                         <div>
-                          <h2 data-en="Profile" data-zh="个人信息">Profile</h2>
-                          <p class="english-translation" lang="en">Profile</p>
+                          <h2 data-en="About me" data-zh="个人介绍">
+                            About me
+                          </h2>
+                          <p class="english-translation" lang="en">About me</p>
                         </div>
                         <img
                           class="panel-avatar"
@@ -303,6 +297,15 @@
                         />
                       </div>
                       <p class="profile-name">Haoyu Hong</p>
+                      <p
+                        class="biography"
+                        data-en="I spent six years at Beijing 21CIS and now study in Birmingham. I enjoy photography and drawing. My dream is to travel the world with a camera and the person I love."
+                        data-zh="我在北京21世纪度过了六年时光，目前在伯明翰求学。我热爱摄影和绘画，梦想是带着相机，和喜欢的人一起环游世界。"
+                      >
+                        I spent six years at Beijing 21CIS and now study in
+                        Birmingham. I enjoy photography and drawing. My dream is
+                        to travel the world with a camera and the person I love.
+                      </p>
                       <div class="profile-facts">
                         <div>
                           <svg class="icon"><use href="#i-school" /></svg
@@ -323,6 +326,8 @@
                           ><span
                             ><strong data-en="United Kingdom" data-zh="英国"
                               >United Kingdom</strong
+                            ><span data-en="Birmingham" data-zh="伯明翰"
+                              >Birmingham</span
                             ></span
                           >
                         </div>
@@ -369,28 +374,7 @@
                         ><svg class="icon"><use href="#i-external" /></svg
                       ></a>
                     </section>
-                    <section
-                      class="workspace-panel"
-                      id="panel-intro"
-                      role="tabpanel"
-                      aria-labelledby="tab-intro"
-                      tabindex="0"
-                      hidden
-                    >
-                      <h2 data-en="Introduction" data-zh="个人介绍">
-                        Introduction
-                      </h2>
-                      <p class="english-translation" lang="en">Introduction</p>
-                      <p
-                        class="biography"
-                        data-en="I spent six years at Beijing 21CIS and now study in Birmingham. I enjoy photography and drawing. My dream is to travel the world with a camera and the person I love."
-                        data-zh="我在北京21世纪度过了六年时光，目前在伯明翰求学。我热爱摄影和绘画，梦想是带着相机，和喜欢的人一起环游世界。"
-                      >
-                        I spent six years at Beijing 21CIS and now study in
-                        Birmingham. I enjoy photography and drawing. My dream is
-                        to travel the world with a camera and the person I love.
-                      </p>
-                    </section>
+
                     <section
                       class="workspace-panel"
                       id="panel-contact"
@@ -437,7 +421,7 @@
                   <span
                     ><span class="status-dot"></span
                     ><span lang="en">Always thinking</span></span
-                  ><span><span id="workspace-item-count">01 / 04</span></span>
+                  ><span><span id="workspace-item-count">01 / 03</span></span>
                 </div>
               </div>
               <div class="desktop-empty" id="desktop-empty" hidden>
@@ -459,8 +443,8 @@
                 class="dock-icon dock-about"
                 type="button"
                 data-dock="about"
-                aria-label="Open Profile"
-                title="Profile"
+                aria-label="Open About me"
+                title="About me"
               >
                 <svg class="icon"><use href="#i-user" /></svg></button
               ><button
@@ -471,14 +455,6 @@
                 title="Projects"
               >
                 <svg class="icon"><use href="#i-folder" /></svg></button
-              ><button
-                class="dock-icon dock-intro"
-                type="button"
-                data-dock="intro"
-                aria-label="Open Introduction"
-                title="Introduction"
-              >
-                <svg class="icon"><use href="#i-terminal" /></svg></button
               ><span class="dock-divider"></span
               ><button
                 class="dock-icon dock-contact"
@@ -507,15 +483,23 @@
         id="about"
         aria-labelledby="about-title"
       >
-        <div class="section-heading reveal">
-          <p class="eyebrow">01</p>
-          <h2
-            id="about-title"
-            data-en="Programming Languages"
-            data-zh="编程语言"
-          >
-            Programming Languages
-          </h2>
+        <div class="work-heading reveal">
+          <div>
+            <p
+              class="eyebrow"
+              data-en="01 / PROFESSIONAL SKILLS"
+              data-zh="01 / 专业技能"
+            >
+              01 / PROFESSIONAL SKILLS
+            </p>
+            <h2
+              id="about-title"
+              data-en="Programming Languages"
+              data-zh="编程语言"
+            >
+              Programming Languages
+            </h2>
+          </div>
         </div>
         <div class="life-exhibit reveal">
           <div class="building-scene" aria-hidden="true">
@@ -671,15 +655,6 @@
               <svg class="icon"><use href="#i-arrow" /></svg>
             </button>
           </div>
-          <p
-            class="building-status"
-            id="building-status"
-            role="status"
-            aria-live="polite"
-            aria-atomic="true"
-          >
-            01 / 04 — Java
-          </p>
         </div>
       </section>
 
@@ -776,12 +751,12 @@
               >
             </h3>
             <p
-              data-en="Turn images and GIFs into your own Windows cursors. Fine-tune the hotspot, preview the animation, and export a single cursor or a complete theme — all processed locally."
-              data-zh="把图片和 GIF 变成自己的 Windows 光标。调整热点、预览动画，再导出单个光标或整套主题，素材处理全部在本地完成。"
+              data-en="Turn images and GIFs into your own Windows cursors. Fine-tune the hotspot, preview the animation, and export a single cursor or a complete theme."
+              data-zh="把图片和 GIF 变成自己的 Windows 光标。调整热点、预览动画，再导出单个光标或整套主题。"
             >
               Turn images and GIFs into your own Windows cursors. Fine-tune the
               hotspot, preview the animation, and export a single cursor or a
-              complete theme — all processed locally.
+              complete theme.
             </p>
             <div class="project-tags">
               <span>React</span><span>TypeScript</span><span>Canvas</span
@@ -872,30 +847,6 @@
             >Generating new ideas...</span
           >
         </p>
-      </section>
-
-      <section
-        class="contact-section section-container contact-compact"
-        id="contact"
-        aria-labelledby="contact-title"
-      >
-        <div class="contact-glow" aria-hidden="true"></div>
-        <div class="reveal">
-          <h2 id="contact-title" data-en="Contact me" data-zh="与我联系">
-            Contact me
-          </h2>
-          <div class="contact-email">
-            <a href="mailto:hehehong2006@gmail.com">hehehong2006@gmail.com</a
-            ><button
-              type="button"
-              class="copy-email icon-button"
-              aria-label="Copy email address"
-              title="Copy email"
-            >
-              <svg class="icon"><use href="#i-copy" /></svg>
-            </button>
-          </div>
-        </div>
       </section>
     </main>
 

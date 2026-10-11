@@ -8,20 +8,13 @@
   const windowBody = $("#window-body");
   const emptyDesktop = $("#desktop-empty");
   const tabs = $$(".workspace-tab");
-  const sections = ["about", "projects", "intro", "contact"];
+  const sections = ["about", "projects", "contact"];
   const filenames = {
-    about: ["Profile", "个人信息"],
+    about: ["About me", "个人介绍"],
     projects: ["Projects", "个人作品"],
-    intro: ["Introduction", "个人介绍"],
     contact: ["Contact", "联系我"],
   };
   const lifeBuilding = $("#life-building");
-  const buildingNames = [
-    ["Java", "Java"],
-    ["Python", "Python"],
-    ["C++", "C++"],
-    ["JavaScript", "JavaScript"],
-  ];
   let buildingStep = 0;
   let activeTab = "about";
   let language = "en";
@@ -48,9 +41,8 @@
     workspace: ["Interactive personal workspace", "可交互的个人工作空间"],
     tabs: ["Workspace sections", "工作空间栏目"],
     dock: ["Workspace shortcuts", "工作空间快捷入口"],
-    dockAbout: ["Open Profile", "打开个人信息"],
+    dockAbout: ["Open About me", "打开个人介绍"],
     dockProjects: ["Open Projects", "打开个人作品"],
-    dockIntro: ["Open Introduction", "打开个人介绍"],
     dockContact: ["Open Contact", "打开联系我"],
     rotateLeft: ["Rotate building left", "向左旋转建筑"],
     rotateRight: ["Rotate building right", "向右旋转建筑"],
@@ -117,7 +109,6 @@
       ".dock": "dock",
       '[data-dock="about"]': "dockAbout",
       '[data-dock="projects"]': "dockProjects",
-      '[data-dock="intro"]': "dockIntro",
       '[data-dock="contact"]': "dockContact",
       '[data-rotate="-1"]': "rotateLeft",
       '[data-rotate="1"]': "rotateRight",
@@ -178,7 +169,7 @@
     $("#window-filename").textContent =
       filenames[name][language === "zh" ? 1 : 0];
     $("#workspace-item-count").textContent =
-      `0${sections.indexOf(name) + 1} / 04`;
+      `${String(sections.indexOf(name) + 1).padStart(2, "0")} / ${String(sections.length).padStart(2, "0")}`;
   }
 
   function setExpanded(next) {
@@ -194,7 +185,7 @@
     document.body.classList.toggle("expanded-workspace", expanded);
     // Keep keyboard focus inside the expanded desktop without obscuring other content from assistive tech.
     $$(
-      ".site-header, .hero-copy, .workspace-caption, .about-section, .work-section, .contact-section, .site-footer",
+      ".site-header, .hero-copy, .workspace-caption, .about-section, .work-section, .site-footer",
     ).forEach((element) => {
       element.inert = expanded;
     });
@@ -316,11 +307,6 @@
         String(Number(button.dataset.face) === face),
       );
     });
-    $("#building-status").textContent =
-      "0" +
-      (face + 1) +
-      " / 04 — " +
-      buildingNames[face][language === "zh" ? 1 : 0];
   }
 
   $$("[data-rotate]").forEach((button) =>
