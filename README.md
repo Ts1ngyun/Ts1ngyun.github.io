@@ -1,4 +1,4 @@
-# Haoyu Hong — Personal Website
+#  Personal Website
 
 A personal portfolio with a dark blue visual theme and an interactive macOS-inspired workspace. Built with HTML, CSS, and vanilla JavaScript, without a build step or runtime dependencies.
 
